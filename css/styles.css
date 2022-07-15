@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--tipo-letra);
+}
+
+h1{
+    font-family: var(--tipo-letra);
+}
+
+:root {
+    --backgroundColor-button: rgb(221, 76, 76);
+    --color-button: white;
+    --title-task: 22px;
+    --subtitle-task: 15px;
+    --text-task: 14px;
+    --tipo-letra: 'Montserrat', sans-serif 
+  }
+
+  .l-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .imgLogo{
+    width: 100px;
+  }
+
+
+  /*---------STYLES BUTTONS ------------*/
+  .button{
+    background-color: var(--backgroundColor-button);
+    color: var(--color-button);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 8px;
+  }
+
+
+  /*-----------STYLES TAREAS*--------*/
+  .l-task{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 172px;
+    padding: 5px;
+  }
+
+
+  .section-title{
+    font-family: var(--tipo-letra);
+  }
+
+  /*--------STYLES FORM------*/
+
+  .form-container{
+    padding: 5px;
+  }
+  .form-new-task{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
