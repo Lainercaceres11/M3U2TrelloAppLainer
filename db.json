@@ -1,0 +1,26 @@
+{
+    "task":[
+        {
+            "id": "01",
+            "title": "Frontend",
+            "person": "Lainer",
+            "details": "Tarea front",
+            "state": "done",
+            "deadline": "122333333",
+            "created": "5565656565665"
+        },
+
+        {
+            "id": "01",
+            "title": "Frontend",
+            "person": "Lainer",
+            "details": "Tarea front",
+            "state": "to do",
+            "deadline": "34444444",
+            "created": "888888888888999"
+        }
+
+
+    ]
+
+}
