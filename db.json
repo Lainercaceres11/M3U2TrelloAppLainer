@@ -6,21 +6,29 @@
             "person": "Lainer",
             "details": "Tarea front",
             "state": "done",
-            "deadline": "122333333",
-            "created": "5565656565665"
+            "deadline": "1658453809",
+            "created": "1658453809"
         },
 
         {
             "id": "01",
-            "title": "Frontend",
+            "title": "Backend",
             "person": "Lainer",
             "details": "Tarea front",
-            "state": "to do",
-            "deadline": "34444444",
-            "created": "888888888888999"
+            "state": "progress",
+            "deadline": "1658453809",
+            "created": "1658453809"
+        },
+
+        {
+            "id": "01",
+            "title": "Backend",
+            "person": "Lainer",
+            "details": "Tarea front",
+            "state": "created",
+            "deadline": "1658453809",
+            "created": "1658453809"
         }
-
-
     ]
 
 }
