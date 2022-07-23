@@ -4,27 +4,27 @@
             "id": "01",
             "title": "Frontend",
             "person": "Lainer",
-            "details": "Tarea front",
+            "details": "Realizar menu",
             "state": "done",
             "deadline": "1658453809",
             "created": "1658453809"
         },
 
         {
-            "id": "01",
+            "id": "02",
             "title": "Backend",
-            "person": "Lainer",
-            "details": "Tarea front",
+            "person": "Juan Saveedra",
+            "details": "Relacionar tablas de la base de datos",
             "state": "progress",
             "deadline": "1658453809",
             "created": "1658453809"
         },
 
         {
-            "id": "01",
-            "title": "Backend",
-            "person": "Lainer",
-            "details": "Tarea front",
+            "id": "03",
+            "title": "GitHub",
+            "person": "Pedro",
+            "details": "Actualizar repositorio",
             "state": "created",
             "deadline": "1658453809",
             "created": "1658453809"
