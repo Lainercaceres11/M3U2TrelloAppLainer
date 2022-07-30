@@ -17,6 +17,24 @@
         "state": "to-do",
         "deadline": 1615524959,
         "created": 1615352159
+      },
+      {
+        "id": 3,
+        "title": "Frontend",
+        "person": "Juan.",
+        "details": "Crear modal",
+        "state": "to-do",
+        "deadline": 1615524959,
+        "created": 1615352159
+      },
+      {
+        "id": 3,
+        "title": "Diseño",
+        "person": "Pedro Juarez.",
+        "details": "Diseñar logo",
+        "state": "to-do",
+        "deadline": 1615524959,
+        "created": 1615352159
       }
     ]
   }
