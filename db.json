@@ -1,43 +1,41 @@
 {
-    "task":[
-        {
-            "id": "01",
-            "title": "Frontend",
-            "person": "Lainer",
-            "details": "Realizar menu",
-            "state": "done",
-            "deadline": "1658453809",
-            "created": "11/12/2021"
-        },
-
-        {
-            "id": "02",
-            "title": "Backend",
-            "person": "Juan Saveedra",
-            "details": "Relacionar tablas de la base de datos",
-            "state": "progress",
-            "deadline": "1658453809",
-            "created": "01/12/2022"
-        },
-
-        {
-            "id": "03",
-            "title": "GitHub",
-            "person": "Pedro",
-            "details": "Actualizar repositorio",
-            "state": "created",
-            "deadline": "1658453809",
-            "created": "22/03/2021"
-        },
-        {
-            "id": "04",
-            "title": "Responder correos",
-            "person": "Mateu Alemany",
-            "details": "Responder todos los correos",
-            "state": "created",
-            "deadline": "1658453809",
-            "created": "12/12/2021"
-        }
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Base de datos",
+        "person": "Lainer Caceres",
+        "details": "Normalizar la base de datos",
+        "state": "done",
+        "deadline": 1290410940,
+        "created": 1615352159
+      },
+      {
+        "id": 2,
+        "title": "Frontend",
+        "person": "Julian",
+        "details": "Realizar formulario de contacto",
+        "state": "to-do",
+        "deadline": 1615524959,
+        "created": 1615352159
+      },
+      {
+        "id": 2,
+        "title": "Backend",
+        "person": "Victor",
+        "details": "Crear API REST",
+        "state": "to-do",
+        "deadline": 1223434343,
+        "created": 123467989
+      },
+      {
+        "id": 2,
+        "title": "Frontend",
+        "person": "Julian",
+        "details": "Realizar formulario de contacto",
+        "state": "to-do",
+        "deadline": 16215121892192,
+        "created": 10291921982182
+      }
     ]
-
-}
+  }
+  
