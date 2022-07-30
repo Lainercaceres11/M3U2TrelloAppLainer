@@ -2,39 +2,21 @@
     "tasks": [
       {
         "id": 1,
-        "title": "Base de datos",
-        "person": "Lainer Caceres",
-        "details": "Normalizar la base de datos",
+        "title": "Frontend",
+        "person": "Lainer",
+        "details": "Crear formulario de contacto",
         "state": "done",
         "deadline": 1290410940,
         "created": 1615352159
       },
       {
         "id": 2,
-        "title": "Frontend",
-        "person": "Julian",
-        "details": "Realizar formulario de contacto",
+        "title": "Backend",
+        "person": "Julio.",
+        "details": "Crear base de datos",
         "state": "to-do",
         "deadline": 1615524959,
         "created": 1615352159
-      },
-      {
-        "id": 2,
-        "title": "Backend",
-        "person": "Victor",
-        "details": "Crear API REST",
-        "state": "to-do",
-        "deadline": 1223434343,
-        "created": 123467989
-      },
-      {
-        "id": 2,
-        "title": "Frontend",
-        "person": "Julian",
-        "details": "Realizar formulario de contacto",
-        "state": "to-do",
-        "deadline": 16215121892192,
-        "created": 10291921982182
       }
     ]
   }
