@@ -50,8 +50,10 @@ h1{
     flex-direction: row;
     justify-content: start;
     flex-wrap: wrap;
-    gap: 172px;
+    gap: 20px;
     padding: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
 
@@ -59,15 +61,20 @@ h1{
     font-family: var(--tipo-letra);
   }
 
-  /*--------STYLES FORM------*/
-
-  .form-container{
+  .tags{
+    box-shadow: -70px 34px 60px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 20px solid gray;
     padding: 5px;
   }
-  .form-new-task{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+  /*--------STYLES FORM------*/
+
+  .form{
+    padding-left: 290px;
   }
 
-
+  @media (max-width: 600px) {
+    .form {
+      padding-left: 0px;
+    }
+  }

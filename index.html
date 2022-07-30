@@ -15,78 +15,93 @@
     <header class="header-app">
         <div class="l-container">
             <img src="assets/log.png" alt="Logo de canvan" class="imgLogo">
-            <button class="button btn-crear">Crear nueva tarea</button>
+            <button class="button btn-crear" id="crearTarea">Crear nueva tarea</button>
         </div>
     
     </header>
     <!--End header-->
     
     <main class="main-app">
-        <div class="l-task">
-            <section class="tags">
+        <div class="l-task" id="l-task">
+            <div class="tags">
                 <h2 class="section-title">Por hacer</h2>
                 <div class="container-task" id="todoTask"></div>
-            </section>
+            </div>
     
-            <section class="tags">
+            <div class="tags">
                 <h2 class="section-title">En progreso</h2>
-                <div class="container-task" id="progresTak"></div>
-            </section>
+                <div class="container-task" id="progresTask"></div>
+            </div>
     
-            <section class="tags">
+            <div class="tags">
                 <h2 class="section-title">Finalizadas</h2>
                 <div class="container-task" id="realizadasTask"></div>
-            </section>
-        </div>
+            </div>
+
+            <div class="form">
+                <aside>
+                    <div class="l-container-form" id="l-container-form">
+                        <div class="form-container">
+                            <h1 class="aside-form-title">Nueva tarea</h1>
+                            <form class="form-new-task " id="fromNewTask">
+                                <div class="row-form">
+                                    <label for="title" class="formLabel">Titulo</label>
+                                    <input type="text" name="title" id="title" class="formNewTask form-control form-control-lg"
+                                        placeholder="Titulo">
+                                </div>
+            
+                                <div class="row-form">
+                                    <label for="descripcion" class="formLabel">Descripcion</label>
+                                    <input type="text" name="descripcion" id="descripcion"
+                                        class="formNewTask form-control form-control-lg" placeholder="Descripcion">
+                                </div>
+            
+                                <div class="row-form">
+                                    <label for="responsible" class="formLabel">Responsable</label>
+                                    <select name="responsible" id="responsible" class=" form-select">
+                                        <option value="">Seleccionar</option>
+                                        <option value="user1">User 1</option>
+                                        <option value="user2">User 2</option>
+                                    </select>
+                                </div>
+            
+                                <div class="row-form">
+                                    <label for="plazo" class="formLabel">Plazo de la entrega</label>
+                                    <select name="plazo" id="plazo" class="form-select">
+                                        <option value="" selected>Seleccionar</option>
+                                        <option value="oneDay">1 dia</option>
+                                        <option value="twoDay">2 dia</option>
+                                        <option value="oneWeek">1 semana</option>
+                                    </select>
+                                </div>
+                                <div class="row-form">
+                                    <div class="buttons">
+                                        <button class="button btn-guardar" id="botonGuardar" onclick="nuevaTarea()">Guardar</button>
+                                        <button class="button btn-reset" type="reset" id="btnCancelar">Resetear</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            </div>
     
     </main>
    <!--End Main-->
 
 
-   <aside>
-    <div class="l-container-form">
-        <div class="form-container">
-            <h1 class="aside-form-title">Nueva tarea</h1>
-            <form class="form-new-task " id="fromNewTask">
-                <div class="row-form">
-                    <label for="title" class="formLabel">Titulo</label>
-                    <input type="text" name="title" id="title" class="formNewTask form-control form-control-lg" placeholder="Escribe el titulo de la tarea">
-                </div>
 
-                <div class="row-form">
-                    <label for="descripcion" class="formLabel">Descripcion</label>
-                    <input type="text" name="descripcion" id="descripcion" class="formNewTask form-control form-control-lg" placeholder="Escribe la descripcion de la tarea">
-                </div>
 
-                <div class="row-form">
-                    <label for="responsible" class="formLabel">Responsable</label>
-                    <select name="responsible" id="responsibleTask" class=" form-select">
-                        <option value="">Seleccionar</option>
-                        <option value="user1">User 1</option>
-                        <option value="user2">User 2</option>
-                    </select>
-                </div>
+   <!--import librerias-->
+   <script src="./src/librerias/axios.js"></script>
+   <script src="./src/librerias/draggable.js"></script>
 
-                <div class="row-form">
-                    <label for="plazo" class="formLabel">Plazo de la entrega</label>
-                    <select name="responsible" id="responsibleTask" class="form-select">
-                        <option value="" selected>Seleccionar</option>
-                        <option value="oneDay">1 dia</option>
-                        <option value="twoDay">2 dia</option>
-                        <option value="oneWeek">1 semana</option>
-                    </select>
-                </div>
-
-                <div class="row-form">
-                   <div class="buttons">
-                    <button class="button btn-guardar" type="submit">Guardar</button>
-                    <button class="button btn-reset" type="reset" id="btnCancelar">Resetear</button>
-                   </div>
-                </div>
-
-            </form>
-        </div>
-    </div>
-   </aside>
+   <!--Import archivos js-->
+   <script type="module" src="src/index.js"></script>
+   <script src="./src/api/request.js"></script>
+   <script src="./src/helpers/togle.js"></script>
+   <script src="./src/helpers/date.js"></script>
+   <script src="./src/helpers/dragable.js"></script>
 </body>
 </html>
