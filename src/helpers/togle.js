@@ -1,14 +1,13 @@
-const contenedorFormulario = document.getElementById('l-container-form')
-const cancelarFormulario = document.getElementById('btnCancelar');
+const modalNewTask = document.querySelector('#modalNewTask');
 
+const btnNewTask = document.querySelector('#btnNewTask');
+const btnCancelNewTask = document.querySelector('#btnCancelNewTask');
 
-//Boton crear tarea
-crearTarea.addEventListener('click', (e)=>{
-    contenedorFormulario.style.visibility = "visible";   
-})
+btnNewTask.addEventListener('click', () => {
+  modalNewTask.classList.add('active');
+});
 
-cancelarFormulario.addEventListener('click', (e)=>{
-    contenedorFormulario.style.visibility = "hidden";   
-    contenedorFormulario.reset();
-})
+btnCancelNewTask.addEventListener('click', () => {
+  modalNewTask.classList.remove('active');
+});
 

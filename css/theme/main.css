@@ -1,0 +1,27 @@
+.main-app
+{
+  flex-direction: column;
+  background-color: var(--c-first-main);
+}
+
+.main-app,
+.main-app .l-container
+{
+  flex: 1;
+  display: flex;
+  gap: var(--gutter);
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  background-color: blue;
+  color: wheat;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+  

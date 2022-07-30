@@ -1,80 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* config files */
+@import "config/var.css";
+@import "config/reset.css";
 
-body{
-    font-family: var(--tipo-letra);
-}
+/* layout files */
+@import "layout/index.css";
 
-h1{
-    font-family: var(--tipo-letra);
-}
+/* theme files */
+@import "theme/header.css";
+@import "theme/main.css";
+@import "theme/section.css";
+@import "theme/aside.css";
 
-:root {
-    --backgroundColor-button: rgb(221, 76, 76);
-    --color-button: white;
-    --title-task: 22px;
-    --subtitle-task: 15px;
-    --text-task: 14px;
-    --tipo-letra: 'Montserrat', sans-serif 
-  }
+/* components files */
+@import "utils/draggable.css";
 
-  .l-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  .imgLogo{
-    width: 100px;
-  }
-
-
-  /*---------STYLES BUTTONS ------------*/
-  .button{
-    background-color: var(--backgroundColor-button);
-    color: var(--color-button);
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    padding: 8px;
-  }
-
-
-  /*-----------STYLES TAREAS*--------*/
-  .l-task{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 5px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-
-
-  .section-title{
-    font-family: var(--tipo-letra);
-  }
-
-  .tags{
-    box-shadow: -70px 34px 60px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
-    border-radius: 20px solid gray;
-    padding: 5px;
-  }
-
-  /*--------STYLES FORM------*/
-
-  .form{
-    padding-left: 290px;
-  }
-
-  @media (max-width: 600px) {
-    .form {
-      padding-left: 0px;
-    }
-  }
+/* components files */
+@import "components/buttons.css";
+@import "components/card-task.css";
+@import "components/form-task.css";

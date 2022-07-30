@@ -1,64 +1,59 @@
 const API_URL = "https://my-json-server.typicode.com/Lainercaceres11/M3U2TrelloAppLainer";
-const createTask = document.getElementById('crearTarea')
-const tareaCreada = document.getElementById('todoTask')
-const tareaProgress = document.getElementById('progresTask');
-const tareaRealizada = document.getElementById('realizadasTask');
-const formulario = document.querySelector('#fromNewTask')
-const botonGuardar = document.getElementById('botonGuardar')
 
+axios
+  .get(`${API_URL}/tasks`)
+  .then((res) => showAllTasks(res.data))
+  .catch((err) => console.error(err));
 
-//Peticion axios
-const getData = axios.get(`${API_URL}/task`)
-getData.then((res)=>{
-   const datos = res.data;
-   datos.map((data)=> {
-   const respuestaHTML = `
-    <div class="card">
-      <div class="card-header>
-        <h3>${data.title}</h3>
-      </div>
-      <div class="card-body>
-      <p>${data.person}</p>
-      <p>${data.details}</p>
-      <p>${data.created}</p>    
-      </div>
-    </div>`
-    if(data.state === "created"){
-      tareaCreada.innerHTML += respuestaHTML;
-    }else if(data.state === "progress"){
-      tareaProgress.innerHTML += respuestaHTML;
-    }else if(data.state == "done"){
-      tareaRealizada.innerHTML += respuestaHTML;
-    }
-  
-   });
-})
-getData.catch((error)>console.log(error));
+const showAllTasks = (data) => {
+  data.map((task) => createTask(task));
+};
 
+const createTask = (task) => {
+  let newTask = document.createElement("article");
+  newTask.classList.add("card-task");
 
-// Apuntamos al formulario para crear la nueva tarea del HTML
-const form = document.querySelector('#fromNewTask');
+  let taskTitle = document.createElement("h3");
+  taskTitle.classList.add("card-task__title");
+  taskTitle.innerText = task.title;
 
-form.addEventListener('submit', (ev) => {
-  // Evitamos que la pagina se recargue cuando se envian los datos
-  ev.preventDefault();
-  const formData = ev.target;
-  
-  // Recopilamos la información a enviar a la API
-  const data = {
-    title: formData.title.value,
-    descripcion: formData.descripcion.value,
-    responsable: formData.responsible.value,
-    fecha: formData.plazo.value
-    // deadline: formData.deadLineTask.value,
-  };
-  // Hacemos una petición POST para enviar la información a la API y le pasamos el arreglo data con la información nueva
-  axios.post(`${API_URL}/task`, data)
-    .then((res) => {
-      //Mandamos la información a la API
-      console.log(res.data);
-      //Reseteamos el formulario
-      formData.reset();
-    })
-    .catch((err) => console.error(err));
-});
+  let taskResponsible = document.createElement("p");
+  taskResponsible.classList.add("card_task__responsible");
+  taskResponsible.innerHTML = `<span class="card_task__responsible--tag-creator">Responsable:</span> ${task.person}`;
+
+  let taskDetails = document.createElement("p");
+  taskDetails.classList.add("card-task__details");
+  taskDetails.innerHTML = `<span class="card-task__details--task-details">Descripción:</span> ${task.details} `;
+
+  let taskDate = document.createElement("p");
+  taskDate.classList.add("card-task__date");
+  taskDate.innerHTML = `<span class="card-task__date--tag-date">Plazo:</span> ${dateFormat(
+    task.deadline
+  )}`;
+
+  let taskCreate = document.createElement("p");
+  taskCreate.classList.add("card-task__date");
+  taskCreate.innerHTML = `<span class="card-task__date--tag-date">Creación:</span> ${dateFormat(
+    task.created
+  )}`;
+
+  newTask.appendChild(taskTitle);
+  newTask.appendChild(taskResponsible);
+  newTask.appendChild(taskDetails);
+  newTask.appendChild(taskDate);
+  newTask.appendChild(taskCreate);
+
+  let columnToDo = document.querySelector("#todoTasks");
+  let columnInProgress = document.querySelector("#progressTasks");
+  let columnDone = document.querySelector("#doneTasks");
+
+  if (task.state === "to-do") {
+    columnToDo.appendChild(newTask);
+  }
+  if (task.state === "in-progress") {
+    columnInProgress.appendChild(newTask);
+  }
+  if (task.state === "done") {
+    columnDone.appendChild(newTask);
+  }
+};

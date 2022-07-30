@@ -1,5 +1,5 @@
-
-const sor = new Sortable.default( 
-    document.querySelectorAll('.container-task'),
-    {draggable: 'div'},
-    ); 
+const sor = new Sortable.default(
+    document.querySelectorAll('.container-tasks'),
+    { draggable: 'article' }
+  );
+  
